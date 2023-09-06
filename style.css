@@ -5,3 +5,8 @@ body {
 .footer {
     margin-bottom: 0px;
 }
+
+canvas {
+    border: 2px black;
+    border-radius: 10%;
+}
