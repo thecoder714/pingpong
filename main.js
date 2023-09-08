@@ -1,7 +1,7 @@
 x = 0;
 y = 0;
 score = 0;
-
+game_status = "";
 
 function preload() {}
 
@@ -22,6 +22,10 @@ function draw() {
         circle(x, y, 40);
     }
     image(img, 350, 350, 1280, 720);
+
+    if(game_status  == "start") {
+        //
+    }
 }
 
 function modelLoaded() {console.log('model loaded');}
@@ -32,4 +36,9 @@ function gotPoses(results) {
         y = ml5.pose.rightwrist.y;
         score = ml5.pose.rightwrist.score;
     } 
+}
+
+function startGame() {
+    game_status = "status";
+    document.getElementById("status").innerHTML = "Game is Loaded";
 }
